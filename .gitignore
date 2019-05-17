@@ -2,7 +2,7 @@
 *.class
 
 # directory
-/target*
+target/*
 
 # Log file
 *.log
