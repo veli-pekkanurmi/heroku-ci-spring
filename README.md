@@ -1,11 +1,22 @@
 HEROKU CI test project
 
+# buzz
 build with Docker
-Gated commits - run tests
-Deploy to Heroku after commits- staging / production
+gated commits - run tests
+profile variables
+deploy to Heroku after commits- staging / production
 
-docker run -d -p 8080:8081 heroku-app:latest
-java -Dspring.profiles.active=dev -jar docker/spring-boot-app-0.0.1-SNAPSHOT.jar
 
-Base url
+# create image
+docker build -t heroku-app:latest .
+
+# run with profile argument
+docker run -d -p 8080:8081 veli-pekkanurmi/heroku-app:0.0.1 dev
+docker run -d -p 8080:8081 heroku-app dev
+
+#base-url
 springbootapp/employees
+
+
+#sources
+https://stackify.com/guide-docker-java/
