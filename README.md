@@ -17,6 +17,14 @@ docker run -d -p 8080:8081 heroku-app dev
 #base-url
 springbootapp/employees
 
-
 #sources
 https://stackify.com/guide-docker-java/
+
+#compile
+mvn package
+cd docker
+heroku container:push web
+
+#deploy
+heroku container
+heroku container:release web

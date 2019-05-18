@@ -1,6 +1,7 @@
 build:
   docker:
     web: docker/Dockerfile
-run:
+    worker: worker/Dockerfile
+#run:
   # overrwites CMD in Dockerfile
-  web: java -Dspring.profiles.active=dev -jar app.jar
+#  web: java -Dspring.profiles.active=dev -jar app.jar
