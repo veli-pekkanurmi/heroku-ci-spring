@@ -1,4 +1,4 @@
-package com.stackify.controller;
+package dev.nurmi.controller;
 
 import java.util.List;
 
@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.http.HttpStatus;
 
-import com.stackify.model.Employee;
-import com.stackify.repository.EmployeeRepository;
+import dev.nurmi.model.Employee;
+import dev.nurmi.repository.EmployeeRepository;
+
+import org.springframework.http.HttpStatus;
 
 @RestController
 public class EmployeeController {

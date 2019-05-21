@@ -1,4 +1,4 @@
-package com.stackify.config;
+package dev.nurmi.config;
 
 import javax.sql.DataSource;
 

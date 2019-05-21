@@ -1,4 +1,4 @@
-package com.stackify.model;
+package dev.nurmi.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

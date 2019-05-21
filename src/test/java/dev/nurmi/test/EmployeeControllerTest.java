@@ -1,4 +1,4 @@
-package com.stackify.test;
+package dev.nurmi.test;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -11,12 +11,12 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import dev.nurmi.Application;
+
 import static org.hamcrest.Matchers.*;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
-import com.stackify.Application;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)

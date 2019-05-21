@@ -1,4 +1,4 @@
-package com.stackify;
+package dev.nurmi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
