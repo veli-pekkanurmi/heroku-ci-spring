@@ -11,14 +11,14 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 @Configuration
 public class PersistenceConfig {
 
-    @Bean
-    public DataSource dataSource() {
-        EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-        EmbeddedDatabase db = builder
-        		.setType(EmbeddedDatabaseType.H2)
-        		.addScript("mySchema.sql")
-        		.addScript("myData.sql").build();
-        return db;
-    }
+//    @Bean
+//    public DataSource dataSource() {
+//        EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
+//        EmbeddedDatabase db = builder
+//        		.setType(EmbeddedDatabaseType.H2)
+//        		.addScript("mySchema.sql")
+//        		.addScript("myData.sql").build();
+//        return db;
+//    }
 
 }
