@@ -7,14 +7,14 @@
 - [ ] git gated commits - run tests
 - [ ] Travis git deploy to Heroku after commits (dev / production)
 - [ ] Tests
-      - [ ] Unit: JUnit
-      - [ ] Integration: JUnit
-      - [ ] UI: (Robotframework, Selenium)
-      - [ ] Load: Junit
+  - [ ] Unit: JUnit
+  - [ ] Integration: JUnit
+  - [ ] UI: (Robotframework, Selenium)
+  - [ ] Load: Junit
 - [ ] Monitoring
-      - [ ] Spring Actuator
-      - [ ] Jhipster
-      - [ ] Log4J
+  - [ ] Spring Actuator
+  - [ ] Jhipster
+  - [ ] Log4J
 
 ## Commands
 
