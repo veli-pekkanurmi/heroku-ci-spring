@@ -1,30 +1,59 @@
-HEROKU CI test project
+# HEROKU CI project
 
-# buzz
-build with Docker
-gated commits - run tests
-profile variables
-deploy to Heroku after commits- staging / production
+## Tech stack & implementations
+- [x] Docker
+- [x] Maven Spotify Docker plugin
+- [x] Enviroment Profile variables for builds (default/dev, production)
+- [ ] git gated commits - run tests
+- [ ] Travis git deploy to Heroku after commits (dev / production)
+- [ ] Tests
+      - [ ] Unit: JUnit
+      - [ ] Integration: JUnit
+      - [ ] UI: (Robotframework, Selenium)
+      - [ ] Load: Junit
+- [ ] Monitoring
+      - [ ] Spring Actuator
+      - [ ] Jhipster
+      - [ ] Log4J
 
+## Commands
 
-# create image
+###### Build with Maven (generates Docker file) -  images for enviroments
+```
+mvn package -DskipTests docker:build
+mvn package -DskipTests docker:build -Dapp-profile=prod
+```
+###### Run docker container by image name
+```
+docker run -d -p 8080:8081 heroku-app-default
+docker run -d -p 8080:8081 heroku-app-prod
+```
+###### push to heroku container hub
+```
+cd target/docker && heroku container:push web
+```
+###### deploy to heroku
+```
+cd target/docker && heroku container:release web
+```
+###### open app (https://heroku-ci-spring.herokuapp.com/employees)
+```
+heroku open
+```
+###### Run spring boot run with profile arguments (novelty)
+```
+mvn spring-boot:run -Dspring.profiles.active=prod
+```
+###### Remove old docker images
+```
+docker rmi $(docker images -qa -f 'dangling=true')
+```
+###### DEPRECATED docker run with profile argument
+###### uses run.sh in Dockerfile CMD & jar. in docker-folder - not a good fit with Heroku CLI deployment
+```
+docker run -d -p 8080:8081 heroku-app prod
+```
+###### DEPRECATED create image
+```
 docker build -t heroku-app:latest .
-
-# run with profile argument
-docker run -d -p 8080:8081 veli-pekkanurmi/heroku-app:0.0.1 dev
-docker run -d -p 8080:8081 heroku-app dev
-
-#base-url
-springbootapp/employees
-
-#sources
-https://stackify.com/guide-docker-java/
-
-#compile
-mvn package
-cd docker
-heroku container:push web
-
-#deploy
-heroku container
-heroku container:release web
+```
